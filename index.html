@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBUC 유니폼 선정 비교표</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        
+        h1 { text-align: center; color: #1a1a1a; margin-bottom: 30px; font-size: 24px; }
+
+        /* 기본 테이블 스타일 */
+        table { width: 100%; border-collapse: collapse; }
+        th { background-color: #f4f4f4; color: #555; padding: 15px; text-align: center; font-size: 14px; border-bottom: 2px solid #eee; }
+        td { border-bottom: 1px solid #eee; padding: 20px 10px; text-align: center; vertical-align: middle; }
+        
+        .img-wrapper { 
+            width: 100%;
+            max-width: 250px; 
+            height: 300px; 
+            margin: 0 auto; 
+            background-color: #fff;
+            border: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .prod-img { 
+            max-width: 100%; 
+            max-height: 100%; 
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .prod-name { font-size: 18px; font-weight: bold; color: #002c5f; display: block; }
+        .prod-id { font-size: 13px; color: #aaa; margin-top: 4px; display: block; }
+        
+        .btn-link { 
+            text-decoration: none; 
+            background: #002c5f; 
+            color: white; 
+            padding: 10px 20px; 
+            border-radius: 30px; 
+            font-size: 14px; 
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        /* 모바일 대응 핵심 코드 */
+        @media screen and (max-width: 600px) {
+            .container { padding: 15px; border-radius: 0; box-shadow: none; }
+            h1 { font-size: 20px; }
+            
+            /* 테이블을 카드 형태로 변환 */
+            table, thead, tbody, th, td, tr { display: block; }
+            thead { display: none; } /* 모바일에서 제목 행 숨김 */
+            
+            tr { 
+                margin-bottom: 30px; 
+                border: 1px solid #eee; 
+                border-radius: 12px; 
+                padding: 15px;
+                background: #fff;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            }
+            
+            td { 
+                border: none; 
+                padding: 10px 0; 
+                width: 100% !important; 
+            }
+            
+            .img-wrapper { height: 350px; max-width: 100%; } /* 모바일에서 이미지 더 크게 */
+            .prod-name { font-size: 22px; margin-top: 10px; }
+            .btn-link { width: 80%; padding: 15px 0; font-size: 16px; margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>TBUC 유니폼 후보 목록</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th width="50%">제품 이미지</th>
+                <th width="25%">모델명</th>
+                <th width="25%">상세 정보</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="img-wrapper">
+                        <img src="./source/1741591593.png" alt="T-2401" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-2401'">
+                    </div>
+                </td>
+                <td>
+                    <span class="prod-name">T-2401</span>
+                    <span class="prod-id">1741591593</span>
+                </td>
+                <td><a href="https://www.tbuc.co.kr/shop/item.php?it_id=1741591593" target="_blank" class="btn-link">자세히 보기</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="img-wrapper">
+                        <img src="./source/1678427015.png" alt="T-2305" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-2305'">
+                    </div>
+                </td>
+                <td>
+                    <span class="prod-name">T-2305</span>
+                    <span class="prod-id">1678427015</span>
+                </td>
+                <td><a href="https://www.tbuc.co.kr/shop/item.php?it_id=1678427015" target="_blank" class="btn-link">자세히 보기</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="img-wrapper">
+                        <img src="./source/1613639471.png" alt="T-1901" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-1901'">
+                    </div>
+                </td>
+                <td>
+                    <span class="prod-name">T-1901</span>
+                    <span class="prod-id">1613639471</span>
+                </td>
+                <td><a href="https://www.tbuc.co.kr/shop/item.php?it_id=1613639471" target="_blank" class="btn-link">자세히 보기</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="img-wrapper">
+                        <img src="./source/1613639429.png" alt="T-1902" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-1902'">
+                    </div>
+                </td>
+                <td>
+                    <span class="prod-name">T-1902</span>
+                    <span class="prod-id">1613639429</span>
+                </td>
+                <td><a href="https://www.tbuc.co.kr/shop/item.php?it_id=1613639429" target="_blank" class="btn-link">자세히 보기</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="img-wrapper">
+                        <img src="./source/1577088544.png" alt="T-801" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-801'">
+                    </div>
+                </td>
+                <td>
+                    <span class="prod-name">T-801</span>
+                    <span class="prod-id">1577088544</span>
+                </td>
+                <td><a href="https://www.tbuc.co.kr/shop/item.php?it_id=1577088544" target="_blank" class="btn-link">자세히 보기</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="img-wrapper">
+                        <img src="./source/1577081727.png" alt="T-701" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-701'">
+                    </div>
+                </td>
+                <td>
+                    <span class="prod-name">T-701</span>
+                    <span class="prod-id">1577081727</span>
+                </td>
+                <td><a href="https://www.tbuc.co.kr/shop/item.php?it_id=1577081727" target="_blank" class="btn-link">자세히 보기</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="img-wrapper">
+                        <img src="./source/1577079447.png" alt="T-601" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-601'">
+                    </div>
+                </td>
+                <td>
+                    <span class="prod-name">T-601</span>
+                    <span class="prod-id">1577079447</span>
+                </td>
+                <td><a href="https://www.tbuc.co.kr/shop/item.php?it_id=1577079447" target="_blank" class="btn-link">자세히 보기</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="img-wrapper">
+                        <img src="./source/1577077992.png" alt="T-501" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-501'">
+                    </div>
+                </td>
+                <td>
+                    <span class="prod-name">T-501</span>
+                    <span class="prod-id">1577077992</span>
+                </td>
+                <td><a href="https://www.tbuc.co.kr/shop/item.php?it_id=1577077992" target="_blank" class="btn-link">자세히 보기</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
