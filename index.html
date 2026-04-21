@@ -11,20 +11,14 @@
     <meta property="og:image" content="./source/1741591593.png"> 
     <meta property="og:url" content="https://yourdomain.com/your-page.html">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="유니폼 선정 후보 목록">
-    <meta name="twitter:description" content="우리 팀의 새로운 유니폼 후보들을 확인하고 비교해 보세요.">
-    <meta name="twitter:image" content="./source/1741591593.png">
-
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* 기존 스타일 코드 유지 */
+        /* [기본 스타일] */
         body { font-family: 'Noto Sans KR', sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; color: #333; }
         .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        
         h1 { text-align: center; color: #1a1a1a; margin-bottom: 30px; font-size: 24px; }
 
-        /* 기본 테이블 스타일 */
+        /* [테이블 스타일] */
         table { width: 100%; border-collapse: collapse; }
         th { background-color: #f4f4f4; color: #555; padding: 15px; text-align: center; font-size: 14px; border-bottom: 2px solid #eee; }
         td { border-bottom: 1px solid #eee; padding: 20px 10px; text-align: center; vertical-align: middle; }
@@ -47,7 +41,9 @@
             max-height: 100%; 
             object-fit: contain;
             transition: transform 0.3s ease;
+            cursor: zoom-in; /* 클릭 가능함을 표시 */
         }
+        .prod-img:hover { transform: scale(1.05); }
         
         .prod-name { font-size: 18px; font-weight: bold; color: #002c5f; display: block; }
         .prod-id { font-size: 13px; color: #aaa; margin-top: 4px; display: block; }
@@ -63,15 +59,36 @@
             display: inline-block;
         }
 
-        /* 모바일 대응 핵심 코드 */
+        /* [이미지 크게 보기 모달 CSS] */
+        #imgModal {
+            display: none; 
+            position: fixed; 
+            z-index: 9999; 
+            left: 0; top: 0; 
+            width: 100%; height: 100%; 
+            background-color: rgba(0,0,0,0.85); 
+            align-items: center; 
+            justify-content: center;
+            cursor: zoom-out;
+            backdrop-filter: blur(5px);
+        }
+        #modalImg {
+            max-width: 95%;
+            max-height: 90%;
+            border-radius: 4px;
+            animation: zoomAnim 0.25s ease-out;
+        }
+        @keyframes zoomAnim {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* [모바일 대응] */
         @media screen and (max-width: 600px) {
             .container { padding: 15px; border-radius: 0; box-shadow: none; }
             h1 { font-size: 20px; }
-            
-            /* 테이블을 카드 형태로 변환 */
             table, thead, tbody, th, td, tr { display: block; }
-            thead { display: none; } /* 모바일에서 제목 행 숨김 */
-            
+            thead { display: none; }
             tr { 
                 margin-bottom: 30px; 
                 border: 1px solid #eee; 
@@ -80,14 +97,8 @@
                 background: #fff;
                 box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             }
-            
-            td { 
-                border: none; 
-                padding: 10px 0; 
-                width: 100% !important; 
-            }
-            
-            .img-wrapper { height: 350px; max-width: 100%; } /* 모바일에서 이미지 더 크게 */
+            td { border: none; padding: 10px 0; width: 100% !important; }
+            .img-wrapper { height: 350px; max-width: 100%; }
             .prod-name { font-size: 22px; margin-top: 10px; }
             .btn-link { width: 80%; padding: 15px 0; font-size: 16px; margin-top: 10px; }
         }
@@ -110,7 +121,7 @@
             <tr>
                 <td>
                     <div class="img-wrapper">
-                        <img src="./source/1741591593.png" alt="T-2401" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-2401'">
+                        <img src="./source/1741591593.png" alt="TBS-5503" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=TBS-5503'">
                     </div>
                 </td>
                 <td>
@@ -122,7 +133,7 @@
             <tr>
                 <td>
                     <div class="img-wrapper">
-                        <img src="./source/1678427015.png" alt="T-2305" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-2305'">
+                        <img src="./source/1678427015.png" alt="TBT-1604" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=TBT-1604'">
                     </div>
                 </td>
                 <td>
@@ -134,7 +145,7 @@
             <tr>
                 <td>
                     <div class="img-wrapper">
-                        <img src="./source/1613639471.png" alt="T-1901" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-1901'">
+                        <img src="./source/1613639471.png" alt="MT-203" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=MT-203'">
                     </div>
                 </td>
                 <td>
@@ -146,7 +157,7 @@
             <tr>
                 <td>
                     <div class="img-wrapper">
-                        <img src="./source/1613639429.png" alt="T-1902" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-1902'">
+                        <img src="./source/1613639429.png" alt="MT-202" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=MT-202'">
                     </div>
                 </td>
                 <td>
@@ -158,7 +169,7 @@
             <tr>
                 <td>
                     <div class="img-wrapper">
-                        <img src="./source/1577088544.png" alt="T-801" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-801'">
+                        <img src="./source/1577088544.png" alt="T-16" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-16'">
                     </div>
                 </td>
                 <td>
@@ -170,7 +181,7 @@
             <tr>
                 <td>
                     <div class="img-wrapper">
-                        <img src="./source/1577081727.png" alt="T-701" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-701'">
+                        <img src="./source/1577081727.png" alt="COOL T-2" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=COOL+T-2'">
                     </div>
                 </td>
                 <td>
@@ -182,7 +193,7 @@
             <tr>
                 <td>
                     <div class="img-wrapper">
-                        <img src="./source/1577079447.png" alt="T-601" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-601'">
+                        <img src="./source/1577079447.png" alt="PS1" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=PS1'">
                     </div>
                 </td>
                 <td>
@@ -194,7 +205,7 @@
             <tr>
                 <td>
                     <div class="img-wrapper">
-                        <img src="./source/1577077992.png" alt="T-501" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=T-501'">
+                        <img src="./source/1577077992.png" alt="PKG5" class="prod-img" onerror="this.src='https://via.placeholder.com/250x300?text=PKG5'">
                     </div>
                 </td>
                 <td>
@@ -206,6 +217,34 @@
         </tbody>
     </table>
 </div>
+
+<div id="imgModal">
+    <img id="modalImg" src="" alt="확대 이미지">
+</div>
+
+<script>
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    const images = document.querySelectorAll(".prod-img");
+
+    // 이미지 클릭 시 모달 열기
+    images.forEach(img => {
+        img.addEventListener("click", function() {
+            modal.style.display = "flex";
+            modalImg.src = this.src;
+        });
+    });
+
+    // 모달 클릭 시 닫기 (배경 클릭 포함)
+    modal.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+
+    // ESC 키로 닫기
+    document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape") modal.style.display = "none";
+    });
+</script>
 
 </body>
 </html>
